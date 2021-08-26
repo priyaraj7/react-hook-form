@@ -19,7 +19,7 @@ const Signup = () => {
           type="text"
           name="firstName"
           onChange={handleInputChange}
-          value={inputs.firstName}
+          value={inputs.firstName || ""}
           required
         />
         <label>Last Name</label>
@@ -27,7 +27,7 @@ const Signup = () => {
           type="text"
           name="lastName"
           onChange={handleInputChange}
-          value={inputs.lastName}
+          value={inputs.lastName || ""}
           required
         />
       </div>
@@ -37,7 +37,7 @@ const Signup = () => {
           type="email"
           name="email"
           onChange={handleInputChange}
-          value={inputs.email}
+          value={inputs.email || ""}
           required
         />
       </div>
@@ -47,7 +47,7 @@ const Signup = () => {
           type="password"
           name="password1"
           onChange={handleInputChange}
-          value={inputs.password1}
+          value={inputs.password1 || ""}
         />
       </div>
       <div>
@@ -56,7 +56,7 @@ const Signup = () => {
           type="password"
           name="password2"
           onChange={handleInputChange}
-          value={inputs.password2}
+          value={inputs.password2 || ""}
         />
       </div>
       <button type="submit">Sign Up</button>
