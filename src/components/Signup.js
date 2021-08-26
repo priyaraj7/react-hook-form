@@ -2,8 +2,15 @@ import React from "react";
 import useSignUpForm from "./CustomHooks";
 
 const Signup = () => {
+  //alert
+  const signup = () => {
+    alert(`User Created!
+               Name: ${inputs.firstName} ${inputs.lastName}
+               Email: ${inputs.email}`);
+  };
+  //
   //to initialize this custom hook, similar to how we initialized the useState hook earlier.
-  const { inputs, handleInputChange, handleSubmit } = useSignUpForm();
+  const { inputs, handleInputChange, handleSubmit } = useSignUpForm(signup);
   return (
     <form onSubmit={handleSubmit}>
       <div>

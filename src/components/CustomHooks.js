@@ -14,7 +14,8 @@ const useSignUpForm = (callback) => {
 
   // It is very important that the name of this functional component starts with “use”. This functional component is actually going to be our custom hook. And in order for React to recognize any custom hooks in our apps, their name should start with “use”.
   const handleInputChange = (event) => {
-    event.persists();
+    //event.persists();
+    event.preventDefault();
     setInputs((inputs) => ({
       ...inputs,
       [event.target.name]: event.target.value,
